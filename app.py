@@ -136,7 +136,7 @@ def run_dashboard():
 
     2. Sandwich Attacks – When a bot places a transaction *before* and *after* someone else’s, forcing the victim to pay more while the bot profits.
 
-    3. Anomalous Transactions – Suspicious TXs where gas fees are unusually high for low value, hinting at bot activity.
+    3. Suspicious Transactions – Suspicious TXs where gas fees are unusually high for low value, hinting at bot activity.
 
     4. MEV Bot Clusters – Groups of transactions likely sent by the same bot (based on gas patterns).
 
@@ -158,7 +158,7 @@ def run_dashboard():
     **Summary:**
     - High Gas Transactions: {} found
     - Sandwich Attacks: {} detected
-    - Anomalous Transactions: {} flagged
+    - Suspicious Transactions: {} flagged
     """.format(len(high_gas_df), len(sandwiches), len(anomalies)))
 
     st.subheader("1. High-Gas Transactions")
@@ -175,7 +175,7 @@ def run_dashboard():
                 f"Block {r.block}: Victim `{r.victim_hash}` sandwiched between `{r.front_hash}` (front) and `{r.back_hash}` (back) — Gas Bids: Front: `{r.front_gas:.1f} Gwei`, Victim: `{r.victim_gas:.1f} Gwei`, Back: `{r.back_gas:.1f} Gwei`."
             )
 
-    st.subheader("3. Anomalous Transactions")
+    st.subheader("3. Suspicious Transactions")
     if anomalies.empty:
         st.info("No anomalies detected.")
     else:
