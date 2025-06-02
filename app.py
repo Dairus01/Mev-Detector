@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 import time
 
 # --- Config ---
-ETHERSCAN_API_KEY = "YFFHVG7P9SMJN1QS68QWMSMS6ND7EUH4IA"
+ETHERSCAN_API_KEY = st.secrets["ETHERSCAN_API_KEY"]
 ETHERSCAN_BASE_URL = "https://api.etherscan.io/v2/api?chainid=1"
 MAX_BLOCKS = 100
 FETCH_TIMEOUT = 60  # seconds
