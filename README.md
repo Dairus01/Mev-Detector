@@ -1,6 +1,6 @@
  # MEV Bot Detector Dashboard
 
-A Streamlit-powered dashboard that scans Ethereum blocks to detect and explain suspicious on-chain activity. This tool helps users identify patterns commonly associated with bots, including:
+A Machine Learning Streamlit-powered dashboard that scans Ethereum blocks to detect and explain suspicious on-chain activity. This tool helps users identify patterns commonly associated with bots, including:
 
 • High Gas Transactions  
 • Sandwich Attacks  
